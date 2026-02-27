@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryan Craven | AInsights</title>
+  <style>
+    :root {
+      --bg: #0b0b0d;
+      --panel: #141417;
+      --text: #ffffff;
+      --muted: #b6b6bf;
+      --border: #25252b;
+      --hover: #1d1d24;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at top, #141419 0%, var(--bg) 45%);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      letter-spacing: 0.01em;
+    }
+
+    main {
+      width: min(92vw, 460px);
+      background: color-mix(in oklab, var(--panel) 90%, black 10%);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem 1.3rem 1.4rem;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(2px);
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 1.4rem;
+    }
+
+    .avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 1rem;
+      border: 1px solid #30303a;
+      background: linear-gradient(135deg, #1f2029 0%, #101015 100%);
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0.55rem 0 0;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 0.97rem;
+    }
+
+    .links {
+      margin-top: 1.4rem;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .button-link {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #18181f;
+      padding: 0.92rem 1rem;
+      text-align: center;
+      font-weight: 600;
+      transition: transform 130ms ease, background-color 130ms ease, border-color 130ms ease;
+    }
+
+    .button-link:hover,
+    .button-link:focus-visible {
+      background: var(--hover);
+      border-color: #383844;
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .footer {
+      margin-top: 1.2rem;
+      text-align: center;
+      color: #8f8f99;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="profile" aria-label="Profile">
+      <div class="avatar" aria-hidden="true">RC</div>
+      <h1>Ryan Craven</h1>
+      <p>AInsights — AI and tech education</p>
+    </section>
+
+    <nav class="links" aria-label="Social and store links">
+      <a class="button-link" href="https://x.com" target="_blank" rel="noopener noreferrer">X</a>
+      <a class="button-link" href="https://www.threads.net" target="_blank" rel="noopener noreferrer">Threads</a>
+      <a class="button-link" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a class="button-link" href="https://gumroad.com" target="_blank" rel="noopener noreferrer">Gumroad Store</a>
+    </nav>
+
+    <div class="footer">Built for clean, modern link sharing.</div>
+  </main>
+</body>
+</html>
